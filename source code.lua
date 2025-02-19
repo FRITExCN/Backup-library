@@ -1582,7 +1582,7 @@ function ImGui:CreateWindow(WindowConfig)
 		return self
 	end
 	function WindowConfig:Remove()
-		Window:Remove()
+		Window:Destroy()
 		return self
 	end
 
