@@ -1525,7 +1525,7 @@ function ImGui:CreateWindow(WindowConfig)
 
 	--// Close Window 
 	local CloseButton: TextButton = TitleBar.Close
-	CloseButton.Visible = WindowConfig.NoClose ~= false
+	CloseButton.Visible = WindowConfig.NoClose ~= true
 
 	function WindowConfig:Close()
 		local Callback = WindowConfig.CloseCallback
@@ -1725,7 +1725,7 @@ function ImGui:CreateModal(Config)
 	Config.TabsBar = Config.TabsBar ~= nil and Config.TabsBar or false
 	Config.NoCollapse = true
 	Config.NoResize = true
-	Config.NoClose = true
+	Config.NoClose = false
 	Config.NoSelectEffect = true
 	Config.Parent = ModalEffect
 
